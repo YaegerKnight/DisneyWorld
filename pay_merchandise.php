@@ -5,7 +5,7 @@
 				 
 				 $dbhost = "localhost";
                  $dbuser = "root";
-                 $dbpass = "root";
+                 $dbpass = "";
                  $dbname = "disneyworld";
 				 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 

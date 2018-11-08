@@ -5,7 +5,7 @@
 	require_once("included_functions.php");
     $dbhost = "localhost";
     $dbuser = "root";
-    $dbpass = "root";
+    $dbpass = "";
     $dbname = "disneyworld";
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 

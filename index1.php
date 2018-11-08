@@ -3,7 +3,7 @@
 <?php
     $dbhost = "localhost";
     $dbuser = "root";
-    $dbpass = "root";
+    $dbpass = "";
     $dbname = "disneyworld";
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
@@ -659,7 +659,7 @@
   
  
   <!-- Start contact Area -->
-  <div id="contact" class="contact-area">
+  <div id="viewbooking" class="contact-area">
     <div class="contact-inner area-padding">
       <div class="contact-overly"></div>
       <div class="container ">
