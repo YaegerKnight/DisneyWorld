@@ -1,7 +1,7 @@
-1. Password for DB connection must be changed to "root"
+1. Password for DB connection must be changed to "root" - Done
 
-2. Restsaurants to be linked with success.html
+2. Restsaurants to be linked with success.html - Done
+ 
+3. Perform full runthrough - Done
 
-3. Perform full runthrough
-
-4. Change from "Roller Coaster" to "Coaster"
+4. Change from "Roller Coaster" to "Coaster" - Done
