@@ -66,7 +66,7 @@
 							 die("Query merch_update_result failed");
 						 }
 
-						redirect_to("pay_confirm.php");
+						redirect_to("success.html");
 					 } else {
 						 $message = "There were some errors.";
 					 }
