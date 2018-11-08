@@ -8,7 +8,8 @@
                  $dbpass = "root";
                  $dbname = "disneyworld";
 				 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
-			
+
+				 $rname = $_GET['name'];
 				 	
 				 if (isset($_POST['submit'])) {
 					 // form was submitted
@@ -84,7 +85,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Booking Rides</title>
+	<title>Booking Merchandise</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -135,17 +136,10 @@
 							<div class="form-group" >
 								<span class="form-label"  >Select a T-Shirt</span>
 								
-							<select class="form-control" name="sel_t" id="sel_t">
-													<option>Marvel</option>
-													<option>Avenger</option>
-													<option>Wolverine</option>
-													<option>Deadpool</option>
-													<option>Disney</option>
-													<option>Mickey</option>
+								<input type="text" class="form-control" readonly="readonly" value="<?php echo $rname;?>" id="sel_t" name="sel_t" >
 													
 												
-												<select>
-												<span class="select-arrow"></span>
+												
 											</div>
 							
 							

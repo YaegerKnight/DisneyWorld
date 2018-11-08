@@ -12,26 +12,30 @@
     if(mysqli_connect_errno()){
         die("Database connection failed ".mysqli_connect_error()."(".mysqli_connect_errno().")");
 	}
-	$rname = $_GET["name"];
+	if(isset($_GET['name']))
+	{
+		$rname= $_GET['name'];
+	}
+	
 	if (isset($_POST['submit'])) {
 		// form was submitted
 		$name = $_POST["name"];
 		$email = $_POST["email"];
-		//$ride = $_POST["ride"];
+		$ride = $_POST["ride"];
 		$phone = $_POST["phone"];
 		$num_t = $_POST["num_t"];
 	   
 		if ($name != '' && $email != '') {
 			// successful login
 			$ride_id = 0;
-			$ride_query = "SELECT ride_id FROM rides where ride_name = '{$rname}'";
+			$ride_query = "SELECT ride_id FROM rides where ride_name ='{$ride}'";
 			$ride_query_result = mysqli_query($conn,$ride_query);
 			if(!$ride_query_result){
 				die("Database query merch_result failed");
 			}
 			while($row= mysqli_fetch_assoc($ride_query_result)){
 			   $ride_id = $row["ride_id"];
-			   
+			   echo $ride_id;
 			}
 		   
 
@@ -48,14 +52,14 @@
 			
 			if($count == 0){
 			   
-			   $query1 = "INSERT INTO transactions values(1,'{$email}','{$rname}',{$ride_id},{$num_t})";
+			   $query1 = "INSERT INTO transactions values(1,'{$email}','{$ride}',{$ride_id},{$num_t})";
 			   $result1 = mysqli_query($conn,$query1);
 			   if(!$result1){
 				   die("database query1 failed");
 			   }
 			}
 			else{	
-			   $query2 = "INSERT INTO transactions values($count+1,'{$email}','{$rname}',{$ride_id},{$num_t})";	
+			   $query2 = "INSERT INTO transactions values($count+1,'{$email}','{$ride}',{$ride_id},{$num_t})";	
 			   $result2 = mysqli_query($conn,$query2);
 			   if(!$result2){
 				   die("Database query2 failed");

@@ -9,22 +9,56 @@
                  if(mysqli_connect_errno()){
                      die("Database connection failed ".mysqli_connect_error()."(".mysqli_connect_errno().")");
                  }
-                 $query = "SELECT * FROM rides";
-                 $result = mysqli_query($conn,$query);
-                 $rname=""; 
-                  while($row=mysqli_fetch_assoc($result)){
-                    if($row["ride_id"]==111){
-                        $rname=$row["ride_name"];
-                        echo $row["ride_name"];
-                    }
-                  }
-                mysqli_data_seek($result,0);
-                 while($row1=mysqli_fetch_assoc($result)){
-                    if($row1["ride_id"]==112){
-                        $rname=$row1["ride_name"];
-                        echo $row1  ["ride_name"];
-                    }
-                  }
+                 
+                  $rname = "RollerCoaster";
+                  $name = "Mi";
+		            $email = "k@g.com";
+		        //$ride = $_POST["ride"];
+		        $phone = 1234567890;
+		        $num_t = 4;
+                  $query = "SELECT * FROM transactions";
+			$result = mysqli_query($conn,$query);
+			if(!$result){
+				die("database query failed");
+			}
+			$count = 0;
+			while($row= mysqli_fetch_assoc($result)){
+			   $count = $count+1;
+			  
+            }
+            $ride_id = 0;
+			$ride_query = "SELECT ride_id FROM rides where ride_name = '{$rname}'";
+			$ride_query_result = mysqli_query($conn,$ride_query);
+			if(!$ride_query_result){
+				die("Database query merch_result failed");
+			}
+			while($row= mysqli_fetch_assoc($ride_query_result)){
+			   $ride_id = $row["ride_id"];
+			   
+			}
+			
+			if($count == 0){
+			   
+			   $query1 = "INSERT INTO transactions values(1,'{$email}','{$rname}',{$ride_id},{$num_t})";
+			   $result1 = mysqli_query($conn,$query1);
+			   if(!$result1){
+				   die("database query1 failed");
+               }
+               else{
+                   echo "query1 succesful";
+               }
+			}
+			else{	
+			   $query2 = "INSERT INTO transactions values($count+1,'{$email}','{$rname}',{$ride_id},{$num_t})";	
+			   $result2 = mysqli_query($conn,$query2);
+			   if(!$result2){
+				   die("Database query2 failed");
+               }
+               else{
+                echo "query2 succesful";
+            }
+			}
+			
                 
                   mysqli_close($conn);
 ?>

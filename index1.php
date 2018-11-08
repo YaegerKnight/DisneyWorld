@@ -12,6 +12,9 @@
     }
     $query = "SELECT * FROM rides";
     $result = mysqli_query($conn,$query);
+
+    $query3 = "SELECT * FROM merchandise";
+    $result3 = mysqli_query($conn,$query3);
                    
     
 ?>
@@ -508,7 +511,15 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                    
-                      <a href = "pay_merchandise.php"><h4>Marvels T-Shirt</h4></a>
+                      <a href = "pay_merchandise.php?name=<?php 
+                     mysqli_data_seek($result3,0);
+                  while($row=mysqli_fetch_assoc($result3)){
+                    if($row["merch_id"]==1){
+                        $rname=$row["merch_name"];
+                        echo $row["merch_name"];
+                    }
+                  }
+                ?>"><h4><?php echo $rname;?></h4></a>
                       <span>INR :5000/-</span>
                     </a>
                   </div>
@@ -525,7 +536,15 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                      <a href = "pay_merchandise.php"><h4>Avenger Assemble</h4></a>
+                  <a href = "pay_merchandise.php?name=<?php 
+                     mysqli_data_seek($result3,0);
+                  while($row=mysqli_fetch_assoc($result3)){
+                    if($row["merch_id"]==2){
+                        $rname=$row["merch_name"];
+                        echo $row["merch_name"];
+                    }
+                  }
+                ?>"><h4><?php echo $rname;?></h4></a>
                       <span>INR 3000/-</span>
                     </a>
                   </div>
@@ -542,7 +561,15 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                      <a href = "pay_merchandise.php"><h4>X-men Wolverine T-Shirt</h4></a>
+                  <a href = "pay_merchandise.php?name=<?php 
+                     mysqli_data_seek($result3,0);
+                  while($row=mysqli_fetch_assoc($result3)){
+                    if($row["merch_id"]==4){
+                        $rname=$row["merch_name"];
+                        echo $row["merch_name"];
+                    }
+                  }
+                ?>"><h4><?php echo $rname;?></h4></a></a>
                       <span>INR 2500/-</span>
                     </a>
                   </div>
@@ -558,7 +585,15 @@
                 <a href="pay_merchandise.php"><img src="img/portfolio/d4.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                      <a href = "pay_merchendise.html"><h4>Deadpool</h4></a>
+                  <a href = "pay_merchandise.php?name=<?php 
+                     mysqli_data_seek($result3,0);
+                  while($row=mysqli_fetch_assoc($result3)){
+                    if($row["merch_id"]==3){
+                        $rname=$row["merch_name"];
+                        echo $row["merch_name"];
+                    }
+                  }
+                ?>"><h4><?php echo $rname;?></h4></a>
                       <span>INR 3500/-</span>
                     </a>
                   </div>
@@ -574,7 +609,15 @@
                 <a href="pay_merchandise.php"><img src="img/portfolio/d5.png" alt="" /></a>
                 <div class="add-actions text-center text-center">
                   <div class="project-dec">
-                    <a href = "pay_merchendise.html"><h4>Disney Special</h4></a>
+                  <a href = "pay_merchandise.php?name=<?php 
+                     mysqli_data_seek($result3,0);
+                  while($row=mysqli_fetch_assoc($result3)){
+                    if($row["merch_id"]==5){
+                        $rname=$row["merch_name"];
+                        echo $row["merch_name"];
+                    }
+                  }
+                ?>"><h4><?php echo $rname;?></h4></a>
                    <span>INR 2700/-</span>
                     </a>
                   </div>
@@ -590,7 +633,15 @@
                 <a href="pay_merchandise.php"><img src="img/portfolio/d6.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a href = "pay_merchendise.html"><h4>Mickey dark theme</h4></a>
+                  <a href = "pay_merchandise.php?name=<?php 
+                     mysqli_data_seek($result3,0);
+                  while($row=mysqli_fetch_assoc($result3)){
+                    if($row["merch_id"]==6){
+                        $rname=$row["merch_name"];
+                        echo $row["merch_name"];
+                    }
+                  }
+                ?>"><h4><?php echo $rname;?></h4></a>
                      <span>INR 2100/-</span>
                     </a>
                   </div>
