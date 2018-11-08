@@ -3,7 +3,7 @@
 <?php
     $dbhost = "localhost";
     $dbuser = "root";
-    $dbpass = "";
+    $dbpass = "root";
     $dbname = "disneyworld";
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
@@ -394,7 +394,7 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="indian.html">
+                <a href="indian.php">
 										<img src="img/team/1.jpg" alt="">
 									</a>
                 
@@ -412,7 +412,7 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="european.html">
+                <a href="european.php">
 										<img src="img/team/2.jpg" alt="">
 									</a>
                 
@@ -431,7 +431,7 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="italian.html">
+                <a href="italian.php">
 										<img src="img/team/3.jpg" alt="">
 									</a>
                 
@@ -448,7 +448,7 @@
 		  <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="chinese.html">
+                <a href="chinese.php">
 										<img src="img/team/25.jpg" alt="">
 									</a>
                 

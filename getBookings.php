@@ -30,7 +30,7 @@
 	require_once("included_functions.php");
     $dbhost = "localhost";
     $dbuser = "root";
-    $dbpass = "";
+    $dbpass = "root";
     $dbname = "disneyworld";
     $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
@@ -80,7 +80,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Booking Rides</title>
+	<title>View Booking</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">

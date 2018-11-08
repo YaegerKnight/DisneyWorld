@@ -21,21 +21,20 @@
 		// form was submitted
 		$name = $_POST["name"];
 		$email = $_POST["email"];
-		$ride = $_POST["ride"];
-		$phone = $_POST["phone"];
+		$rest = $_POST["rest"];
 		$num_t = $_POST["num_t"];
 	   
 		if ($name != '' && $email != '') {
 			// successful login
-			$ride_id = 0;
-			$ride_query = "SELECT ride_id FROM rides where ride_name ='{$ride}'";
-			$ride_query_result = mysqli_query($conn,$ride_query);
-			if(!$ride_query_result){
+			$rest_id = 0;
+			$rest_query = "SELECT rest_id FROM restaurants where rest_name ='{$rest}'";
+			$rest_query_result = mysqli_query($conn,$rest_query);
+			if(!$rest_query_result){
 				die("Database query merch_result failed");
 			}
-			while($row= mysqli_fetch_assoc($ride_query_result)){
-			   $ride_id = $row["ride_id"];
-			   echo $ride_id;
+			while($row= mysqli_fetch_assoc($rest_query_result)){
+			   $rest_id = $row["rest_id"];
+			   echo $rest_id;
 			}
 		   
 
@@ -52,30 +51,30 @@
 			
 			if($count == 0){
 			   
-			   $query1 = "INSERT INTO transactions values(1,'{$email}','{$ride}',{$ride_id},{$num_t})";
+			   $query1 = "INSERT INTO transactions values(1,'{$email}','{$rest}',{$rest_id},{$num_t})";
 			   $result1 = mysqli_query($conn,$query1);
 			   if(!$result1){
 				   die("database query1 failed");
 			   }
 			}
 			else{	
-			   $query2 = "INSERT INTO transactions values($count+1,'{$email}','{$ride}',{$ride_id},{$num_t})";	
+			   $query2 = "INSERT INTO transactions values($count+1,'{$email}','{$rest}',{$rest_id},{$num_t})";	
 			   $result2 = mysqli_query($conn,$query2);
 			   if(!$result2){
 				   die("Database query2 failed");
 			   }
 			}
 			
-		   $merch_update_query = "UPDATE rides SET ride_seats = ride_seats - $num_t WHERE ride_id = {$ride_id}";
-			$merch_update_result = mysqli_query($conn, $merch_update_query);
+		   $rest_update_query = "UPDATE restaurants SET rest_seats = rest_seats - $num_t WHERE rest_id = {$rest_id}";
+		   $rest_update_result = mysqli_query($conn, $rest_update_query);
 
-			if(!$merch_update_result){
+			if(!$rest_update_result){
 				die("Query merch_update_result failed");
 			}
 
 		   redirect_to("success.html");
 		} else {
-			$message = "There were some errors."; 
+			$message = "There were some errors.";
 		}
 	} else {
 	   $name ="";
@@ -93,7 +92,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Booking Rides</title>
+	<title>Booking Restaurant</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -122,7 +121,7 @@
 						<div class="form-header">
 							<h1>Book a Ride</h1>
 						</div>
-						<form action="booking_rides.php" method="POST">
+						<form action="booking_restaurants.php" method="POST">
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
@@ -130,6 +129,7 @@
 										<input class="form-control" type="text" placeholder="Enter your name" name="name" id="name">
 									</div>
 								</div>
+							
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Email</span>
@@ -137,29 +137,17 @@
 									</div>
 								</div>
 							</div>
+						
 							<div class="form-group">
-								<span class="form-label">Phone</span>
-								<input class="form-control" type="tel" placeholder="Enter your phone number" name="tel" id="tel">
+								<span class="form-label">Restaurant</span>
+								   
+								<input type="text" class="form-control" readonly="readonly" value="<?php echo $rname;?>" id="rest" name="rest" >
+												
 							</div>
 							<div class="form-group">
-								<span class="form-label">Select a ride</span>
-								   
-								<input type="text" class="form-control" readonly="readonly" value="<?php echo $rname;?>" id="ride" name="ride" >
-												
-											</div>
-											<div class="row">
-								<div class="col-sm-5">
-									<div class="form-group">
-										<span class="form-label">Date</span>
-										<input class="form-control" type="date" required>
-									</div>
-								</div>
-								<div class="col-sm-7">
-									<div class="row">
-										<div class="col-sm-5">
-											<div class="form-group">
-												<span class="form-label">Number of Seats</span>
-												<select class="form-control" name="num_t" id="num_t">
+								<span class="form-label">Number of Seats</span>
+								
+								<select class="form-control" name="num_t" id="num_t">
 													<option>1</option>
 													<option>2</option>
 													<option>3</option>
@@ -167,14 +155,12 @@
 												<select>
 												<span class="select-arrow"></span>
 											</div>
-										</div>										
-									</div>
-								</div>
-							</div>
 							<div class="form-btn">
 								<button class="submit-btn" name="submit" id="submit">Book Now</button>
 								<br>
-								<a href = "index1.php"  ><button class="submit-btn">Cancel</button></a>
+								</form>
+							<form action="index1.php">
+								<button class="submit-btn" name="cancel">Cancel</button></a>
 							</div>
 						</form>
 					</div>
@@ -182,6 +168,6 @@
 			</div>
 		</div>
 	</div>
-</body>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>

@@ -5,7 +5,7 @@
 				 
 				 $dbhost = "localhost";
                  $dbuser = "root";
-                 $dbpass = "";
+                 $dbpass = "root";
                  $dbname = "disneyworld";
 				 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
@@ -138,9 +138,7 @@
 								
 								<input type="text" class="form-control" readonly="readonly" value="<?php echo $rname;?>" id="sel_t" name="sel_t" >
 													
-												
-												
-											</div>
+							</div>
 							
 							
 							
@@ -162,7 +160,9 @@
 							<div class="form-btn">
 								<button class="submit-btn" name="submit" value="Submit">Buy</button>
 								<br>
-								<a href = "index1.php"><button class="submit-btn">Cancel</button></a>
+							</form>
+							<form action="index1.php">
+								<button class="submit-btn" name="cancel">Cancel</button></a>
 							</div>
 						</form>
 					</div>
@@ -170,7 +170,7 @@
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>
 <?php

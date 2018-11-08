@@ -1,5 +1,19 @@
 <!doctype html>
 <html lang="en">
+<?php
+   $dbhost = "localhost";
+   $dbuser = "root";
+   $dbpass = "root";
+   $dbname = "disneyworld";
+   $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+
+   if(mysqli_connect_errno()){
+       die("Database connection failed ".mysqli_connect_error()."(".mysqli_connect_errno().")");
+   }
+   $query = "SELECT * FROM restaurants";
+   $result = mysqli_query($conn,$query);
+
+?>
 <head>
   <meta charset="utf-8">
   <title>Disney Land</title>
@@ -64,7 +78,20 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                    
-                      <a href = "restaurant_booking.html"><h4>Gaze Restaurant</h4></a>
+                  <h4><a href="booking_restaurants.php?name=<?php
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==15){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                       
                     </a>
                   </div>
@@ -81,8 +108,21 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                      <a href = "restaurant_booking.html"><h4>Caperberry</h4></a>
-                      
+                  <h4><a href="booking_restaurants.php?name=<?php
+                  mysqli_data_seek($result,0);
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==16){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                     </a>
                   </div>
                 </div>
@@ -98,7 +138,21 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                      <a href = "restaurant_booking.html"><h4>Forage</h4></a>
+                  <h4><a href="booking_restaurants.php?name=<?php
+                  mysqli_data_seek($result,0);
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==17){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                       
                     </a>
                   </div>
@@ -111,10 +165,10 @@
           <div class="col-md-4 col-sm-4 col-xs-12 photo development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/4.jpg" alt="" /></a>
+                
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                      <a href = "restaurant_booking.html"><h4>The Chervil</h4></a>
+                     
                       
                     </a>
                   </div>
@@ -127,10 +181,9 @@
           <div class="col-md-4 col-sm-4 col-xs-12 development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/5.jpg" alt="" /></a>
+                
                 <div class="add-actions text-center text-center">
                   <div class="project-dec">
-                    <a href = "restaurant_booking.html"><h4>Cafe Noir</h4></a>
                    
                     </a>
                   </div>
@@ -146,7 +199,21 @@
                 <a href="pay_merchendise.html"><img src="img/portfolio/6.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a href = "restaurant_booking.html"><h4>Chianti</h4></a>
+                  <h4><a href="booking_restaurants.php?name=<?php
+                  mysqli_data_seek($result,0);
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==18){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                      
                     </a>
                   </div>

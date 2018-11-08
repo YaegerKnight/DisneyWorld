@@ -1,5 +1,19 @@
 <!doctype html>
 <html lang="en">
+<?php
+   $dbhost = "localhost";
+   $dbuser = "root";
+   $dbpass = "root";
+   $dbname = "disneyworld";
+   $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+
+   if(mysqli_connect_errno()){
+       die("Database connection failed ".mysqli_connect_error()."(".mysqli_connect_errno().")");
+   }
+   $query = "SELECT * FROM restaurants";
+   $result = mysqli_query($conn,$query);
+
+?>
 <head>
   <meta charset="utf-8">
   <title>Disney Land</title>
@@ -44,7 +58,7 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
-            <h2>ITALIAN CUISINES</h2>
+            <h2>CHINESE CUISINES</h2>
           </div>
         </div>
       </div>
@@ -60,11 +74,24 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/15.jpg" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/21.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                    
-                      <a href = "restaurant_booking.html"><h4>Little Italy</h4></a>
+                  <h4><a href="booking_restaurants.php?name=<?php
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==23){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                       
                     </a>
                   </div>
@@ -77,11 +104,25 @@
           <div class="col-md-4 col-sm-4 col-xs-12 photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/16.jpg" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/22.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                      <a href = "restaurant_booking.html"><h4>Pizza Stop</h4></a>
+                  <h4><a href="booking_restaurants.php?name=<?php
+                       mysqli_data_seek($result,0);
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==24){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                       
                     </a>
                   </div>
@@ -94,11 +135,25 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/17.jpg" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/23.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                      <a href = "restaurant_booking.html"><h4>Euki</h4></a>
+                  <h4><a href="booking_restaurants.php?name=<?php
+                       mysqli_data_seek($result,0);
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==25){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                       
                     </a>
                   </div>
@@ -111,12 +166,12 @@
           <div class="col-md-4 col-sm-4 col-xs-12 photo development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/18.jpg" alt="" /></a>
+              
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                      <a href = "restaurant_booking.html"><h4>Onesta</h4></a>
+                     
                       
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -127,12 +182,12 @@
           <div class="col-md-4 col-sm-4 col-xs-12 development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/19.jpg" alt="" /></a>
+                <a ></a>
                 <div class="add-actions text-center text-center">
                   <div class="project-dec">
-                    <a href = "restaurant_booking.html"><h4>Vinny's</h4></a>
+                    
                    
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -143,10 +198,24 @@
           <div class="col-md-4 col-sm-4 col-xs-12 design photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchendise.html"><img src="img/portfolio/20.jpg" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/26.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a href = "restaurant_booking.html"><h4>Via Milano</h4></a>
+                  <h4><a href="booking_restaurants.php?name=<?php
+                       mysqli_data_seek($result,0);
+                  $rname=""; 
+                  while($row=mysqli_fetch_assoc($result)){
+                    if($row["rest_id"]==26){
+                        $rname=$row["rest_name"];
+                        echo $row["rest_name"];
+                    }
+                  }
+                ?>">
+                
+                <?php
+                  echo $rname;
+                
+                ?></a>     </h4>
                      
                     </a>
                   </div>
@@ -154,16 +223,16 @@
               </div>
             </div>
           </div>
-          <!-- single-awesome-project end -->
+          
         </div>
       </div>
     </div>
   </div>
-  <!-- awesome-portfolio end -->
+  
   
   
  
-  <!-- Start contact Area -->
+  
   
  
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
