@@ -119,19 +119,19 @@
 								<div class="col-sm-6">
 									<div class="form-group"  >
 										<span class="form-label" >Name</span>
-										<input class="form-control" type="text" placeholder="Enter your name" id="name" name="name">
+										<input class="form-control" type="text" placeholder="Enter your name" required id="name" name="name">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group"> 
 										<span class="form-label"  >Email</span>
-										<input class="form-control" type="email" placeholder="Enter your email" name="email" id="email">
+										<input class="form-control" type="email" placeholder="Enter your email" required name="email" id="email">
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Phone</span>
-								<input class="form-control" type="tel" placeholder="Enter your phone number"  id="phone" name="phone">
+								<input class="form-control" type="tel" placeholder="xxxx-xxx-xxxx" required pattern="^\d{4}-\d{3}-\d{3}$" id="phone" name="phone">
 							</div>
 							<div class="form-group" >
 								<span class="form-label"  >Select a T-Shirt</span>

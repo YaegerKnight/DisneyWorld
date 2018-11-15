@@ -82,8 +82,8 @@
 	   $email = "";
 	   $ride = "";
 	   $phone = "";
-	   $num_t = "";
-		
+		$num_t = "";
+			
 	}
 
 ?>
@@ -104,12 +104,6 @@
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style_booking.css" />
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 
 </head>
 
@@ -127,19 +121,19 @@
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Name</span>
-										<input class="form-control" type="text" placeholder="Enter your name" name="name" id="name">
+										<input class="form-control" type="text" placeholder="Enter your name" name="name" required id="name">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Email</span>
-										<input class="form-control" type="email" placeholder="Enter your email" name="email" id="email">
+										<input class="form-control" type="email" placeholder="Enter your email" name="email"  required id="email">
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Phone</span>
-								<input class="form-control" type="tel" placeholder="Enter your phone number" name="tel" id="tel">
+								<input class="form-control" type="tel" placeholder="xxxx-xxx-xxx" required pattern="^\d{10}$" name="tel" id="tel">
 							</div>
 							<div class="form-group">
 								<span class="form-label">Select a ride</span>
@@ -174,7 +168,9 @@
 							<div class="form-btn">
 								<button class="submit-btn" name="submit" id="submit">Book Now</button>
 								<br>
-								<a href = "index1.php"  ><button class="submit-btn">Cancel</button></a>
+								</form>
+							<form action="index1.php">
+								<button class="submit-btn" name="cancel">Cancel</button></a>
 							</div>
 						</form>
 					</div>

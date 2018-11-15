@@ -39,15 +39,20 @@
 	}
 	if(isset($_GET['email']))
 	{
-		$email= $_GET['email'];
+		$email= htmlspecialchars($_GET['email']);
 	}
 		   
 
-	$query = "SELECT * FROM transactions WHERE trans_user_email = '$email'";
+	$query = "SELECT * FROM transactions WHERE trans_user_email = '{$email}'";
 	$result = mysqli_query($conn,$query);
-	if(!$result){
-		die("database query failed");
-    }
+	$num_rows = mysqli_num_rows($result);
+	if(!$num_rows)
+	{
+		echo '<script> alert("No Bookings Found!! Please book an event");';
+		echo 'window.location.href = "index1.php";';
+		echo '</script>';
+		//redirect_to('index1.php');
+	}
 /*    echo "<body><h3>";
     echo "<table border='1'>
         <tr>

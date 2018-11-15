@@ -1,26 +1,8 @@
 <!doctype html>
 <html lang="en">
-<?php
-    $dbhost = "localhost";
-    $dbuser = "root";
-    $dbpass = "root";
-    $dbname = "disneyworld";
-    $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
-
-    if(mysqli_connect_errno()){
-        die("Database connection failed ".mysqli_connect_error()."(".mysqli_connect_errno().")");
-    }
-    $query = "SELECT * FROM rides";
-    $result = mysqli_query($conn,$query);
-
-    $query3 = "SELECT * FROM merchandise";
-    $result3 = mysqli_query($conn,$query3);
-                   
-    
-?>
 <head>
   <meta charset="utf-8">
-  <title>Disney World</title>
+  <title>Disney Land</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -42,24 +24,34 @@
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Nivo Slider Theme -->
   <link href="css/nivo-slider-theme.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive Stylesheet File -->
   <link href="css/responsive.css" rel="stylesheet">
 </head>
+<?php
+
+
+?>
 <body data-spy="scroll" data-target="#navbar-example">
 
   <div id="preloader"></div>
 
   <header>
-
+    <!-- header-area start -->
     <div id="sticker" class="header-area">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12">
 
-
+            <!-- Navigation -->
             <nav class="navbar navbar-default">
-
+              <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
 										<span class="sr-only">Toggle navigation</span>
@@ -67,14 +59,15 @@
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
 									</button>
-
+                <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="index.html">
-                  <h1>Disney World</h1>
+                  <h1>Disney Land</h1>
 				  <p style="color:white">Bangalore</p>
-
+                  <!-- Uncomment below if you prefer to use an image logo -->
+                  <!-- <img src="img/logo.png" alt="" title=""> -->
 								</a>
               </div>
-
+              <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active">
@@ -92,21 +85,20 @@
                   <li>
                     <a class="page-scroll" href="#portfolio">Merchandise</a>
                   </li>
-                  <li>
-                    <a class="page-scroll" href="#viewbooking">View Booking</a>
-                  </li>
                 </ul>
               </div>
-  
+              <!-- navbar-collapse -->
             </nav>
-
+            <!-- END: Navigation -->
           </div>
         </div>
       </div>
     </div>
-   
+    <!-- header-area end -->
   </header>
+  <!-- header end -->
 
+  <!-- Start Slider Area -->
   <div id="home" class="slider-area">
     <div class="bend niceties preview-2">
       <div id="ensign-nivoslider" class="slides">
@@ -115,40 +107,43 @@
      	<img src="img/slider/bh4.jpg" alt="" title="#slider-direction-3" />
       </div>
 
+      <!-- direction 1 -->
       <div id="slider-direction-1" class="slider-direction slider-one">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="slider-content">
-
+                <!-- layer 1 -->
                 <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
                   <h2 class="title1">The highest rated amuzement Park in Bangalores</h2>
                 </div>
-
+                <!-- layer 2 -->
                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
                   <h1 class="title2">Come and enjoy the rides of a lifetime</h1>
                 </div>
-
+                <!-- layer 3 -->
                 
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- direction 2 -->
       <div id="slider-direction-2" class="slider-direction slider-two">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="slider-content text-center">
-
+                <!-- layer 1 -->
                 <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
                   <h2 class="title1">The highest rated amuzement Park in Bangalore</h2>
                 </div>
-
+                <!-- layer 2 -->
                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
                   <h1 class="title2">Come and enjoy the rides of a lifetime</h1>
                 </div>
-
+                <!-- layer 3 -->
                 
               </div>
             </div>
@@ -156,20 +151,21 @@
         </div>
       </div>
 
-
+      <!-- direction 3 -->
       <div id="slider-direction-3" class="slider-direction slider-two">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="slider-content">
-
+                <!-- layer 1 -->
                 <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
                   <h2 class="title1">The highest rated amuzement Park in Bangalore</h2>
                 </div>
-
+                <!-- layer 2 -->
                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
                   <h1 class="title2">Come and enjoy the rides of a lifetime</h1>
                 </div>
+                <!-- layer 3 -->
                 
               </div>
             </div>
@@ -178,6 +174,9 @@
       </div>
     </div>
   </div>
+  <!-- End Slider Area -->
+
+  <!-- Start About area -->
   <div id="about" class="about-area area-padding">
     <div class="container">
       <div class="row">
@@ -188,6 +187,7 @@
         </div>
       </div>
       <div class="row">
+        <!-- single-well start-->
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-left">
             <div class="single-well">
@@ -197,6 +197,7 @@
             </div>
           </div>
         </div>
+        <!-- single-well end-->
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="well-middle">
             <div class="single-well">
@@ -204,8 +205,8 @@
                 
               </a>
               <p>
-                Come  and  experience  the  joy  of  a  lifetime  at  Disney  World  Bangalore!  
-                        At  Disney  World  Bangalore,  we  are  commited  to  giving  you  the  experience  of  a  lifetime.
+                Come  and  experience  the  joy  of  a  lifetime  at  Disney  Land  Bangalore!  
+                        At  Disney  Land  Bangalore,  we  are  commited  to  giving  you  the  experience  of  a  lifetime.
                         With  the  world's  most  premium  rides,  shows  and  entertainment,  we  assure  you  the  full 
                         Disney  experience  at  an  affordable  price.
 						
@@ -225,9 +226,12 @@
             </div>
           </div>
         </div>
+        <!-- End col-->
       </div>
     </div>
   </div>
+  <!-- End About area -->
+
 <div id="top_rides" class="our-team-area area-padding">
     <div class="container">
       <div class="row">
@@ -242,52 +246,28 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a>
+                <a href="booking_roller.html">
 										<img src="img/team/tr1.jpg" alt="">
 									</a>
+          
               </div>
               <div class="team-content text-center">
-                <h4><a href="booking_rides.php?name=<?php
-                  $rname=""; 
-                  while($row=mysqli_fetch_assoc($result)){
-                    if($row["ride_id"]==111){
-                        $rname=$row["ride_name"];
-                        echo $row["ride_name"];
-                    }
-                  }
-                ?>">
-                
-                <?php
-                  echo $rname;
-                
-                ?></a>     
-                 </h4>
+                <h4>Roller Coaster </h4>
                 <p>The fastest coaster ever</p>
               </div>
             </div>
           </div>
+          <!-- End column -->
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a>
+                <a href="booking_equinox.html">
 										<img src="img/team/tr2.jpg" alt="">
 									</a>
           
               </div>
               <div class="team-content text-center">
-                <h4><a href="booking_rides.php?name=<?php 
-                     mysqli_data_seek($result,0);
-                  while($row=mysqli_fetch_assoc($result)){
-                    if($row["ride_id"]==112){
-                        $rname=$row["ride_name"];
-                        echo $row["ride_name"];
-                    }
-                  }
-                ?>">
-               <?php
-                  echo $rname;
-                
-                ?></a>     </h4>
+                <h4>Equinox</h4>
                 <p>Defies laws of physics</p>
               </div>
             </div>
@@ -296,25 +276,13 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a>
+                <a href="booking_mixer.html">
 										<img src="img/team/tr3.jpg" alt="">
 									</a>
                
               </div>
               <div class="team-content text-center">
-                <h4><a href="booking_rides.php?name=<?php 
-                     mysqli_data_seek($result,0);
-                  while($row=mysqli_fetch_assoc($result)){
-                    if($row["ride_id"]==113){
-                        $rname=$row["ride_name"];
-                        echo $row["ride_name"];
-                    }
-                  }
-                ?>">
-               <?php
-                  echo $rname;
-                
-                ?></a>   </h4>
+                <h4>Mixer</h4>
                 <p>Off to another world</p>
               </div>
             </div>
@@ -322,31 +290,32 @@
 		  <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a>
+                <a href="booking_dropzone.html">
 										<img src="img/team/tr4	.jpg" alt="">
+									</a>
+                
+					
+												</a>
                 
               </div>
               <div class="team-content text-center">
-                <h4><a href="booking_rides.php?name=<?php 
-                     mysqli_data_seek($result,0);
-                  while($row=mysqli_fetch_assoc($result)){
-                    if($row["ride_id"]==114){
-                        $rname=$row["ride_name"];
-                        echo $row["ride_name"];
-                    }
-                  }
-                ?>">
-               <?php
-                  echo $rname;
-                ?></a>    </h4>
+                <h4>Drop Zone</h4>
                 <p>Not for the faint hearted
               </div>
             </div>
           </div>
+          <!-- End column -->
+          
+          <!-- End column -->
         </div>
       </div>
     </div>
   </div>
+
+ 
+
+  <!-- Faq area start -->
+   <!-- Start team Area -->
   <div id="team" class="our-team-area area-padding">
     <div class="container">
       <div class="row">
@@ -361,7 +330,7 @@
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="indian.php">
+                <a href="indian.html">
 										<img src="img/team/1.jpg" alt="">
 									</a>
                 
@@ -375,10 +344,11 @@
               </div>
             </div>
           </div>
+          <!-- End column -->
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="european.php">
+                <a href="european.html">
 										<img src="img/team/2.jpg" alt="">
 									</a>
                 
@@ -393,10 +363,11 @@
               </div>
             </div>
           </div>
+          <!-- End column -->
           <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="italian.php">
+                <a href="italian.html">
 										<img src="img/team/3.jpg" alt="">
 									</a>
                 
@@ -413,7 +384,7 @@
 		  <div class="col-md-3 col-sm-3 col-xs-12">
             <div class="single-team-member">
               <div class="team-img">
-                <a href="chinese.php">
+                <a href="chinese.html">
 										<img src="img/team/25.jpg" alt="">
 									</a>
                 
@@ -427,11 +398,16 @@
               </div>
             </div>
           </div>
-
+          <!-- End column -->
+          
+          <!-- End column -->
         </div>
       </div>
     </div>
   </div>
+  <!-- End Team Area -->
+
+  <!-- Start reviews Area -->
   <div class="reviews-area hidden-xs">
     <div class="work-us">
       <div class="work-left-text">
@@ -446,6 +422,9 @@
       </div>
     </div>
   </div>
+  <!-- End reviews Area -->
+
+  <!-- Start portfolio Area -->
   <div id="portfolio" class="portfolio-area area-padding fix">
     <div class="container">
       <div class="row">
@@ -459,25 +438,19 @@
         <!-- Start Portfolio -page -->
         <div class="awesome-project-1 fix">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            
           </div>
         </div>
         <div class="awesome-project-content">
+          <!-- single-awesome-project start -->
           <div class="col-md-4 col-sm-4 col-xs-12 design development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchandise.php"><img src="img/portfolio/d1.jpg" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/d1.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
                    
-                      <a href = "pay_merchandise.php?name=<?php 
-                     mysqli_data_seek($result3,0);
-                  while($row=mysqli_fetch_assoc($result3)){
-                    if($row["merch_id"]==1){
-                        $rname=$row["merch_name"];
-                        echo $row["merch_name"];
-                    }
-                  }
-                ?>"><h4><?php echo $rname;?></h4></a>
+                      <a href = "pay_merchendise.html"><h4>Marvels T-Shirt</h4></a>
                       <span>INR :5000/-</span>
                     </a>
                   </div>
@@ -485,6 +458,8 @@
               </div>
             </div>
           </div>
+          <!-- single-awesome-project end -->
+          <!-- single-awesome-project start -->
           <div class="col-md-4 col-sm-4 col-xs-12 photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
@@ -492,15 +467,7 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                  <a href = "pay_merchandise.php?name=<?php 
-                     mysqli_data_seek($result3,0);
-                  while($row=mysqli_fetch_assoc($result3)){
-                    if($row["merch_id"]==2){
-                        $rname=$row["merch_name"];
-                        echo $row["merch_name"];
-                    }
-                  }
-                ?>"><h4><?php echo $rname;?></h4></a>
+                      <a href = "pay_merchendise.html"><h4>Avenger Assemble</h4></a>
                       <span>INR 3000/-</span>
                     </a>
                   </div>
@@ -508,6 +475,8 @@
               </div>
             </div>
           </div>
+          <!-- single-awesome-project end -->
+          <!-- single-awesome-project start -->
           <div class="col-md-4 col-sm-4 col-xs-12 design">
             <div class="single-awesome-project">
               <div class="awesome-img">
@@ -515,15 +484,7 @@
                 <div class="add-actions text-center">
                   <div class="project-dec">
                     
-                  <a href = "pay_merchandise.php?name=<?php 
-                     mysqli_data_seek($result3,0);
-                  while($row=mysqli_fetch_assoc($result3)){
-                    if($row["merch_id"]==4){
-                        $rname=$row["merch_name"];
-                        echo $row["merch_name"];
-                    }
-                  }
-                ?>"><h4><?php echo $rname;?></h4></a></a>
+                      <a href = "pay_merchendise.html"><h4>X-men Wolverine T-Shirt</h4></a>
                       <span>INR 2500/-</span>
                     </a>
                   </div>
@@ -531,21 +492,15 @@
               </div>
             </div>
           </div>
+          <!-- single-awesome-project end -->
+          <!-- single-awesome-project start -->
           <div class="col-md-4 col-sm-4 col-xs-12 photo development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchandise.php"><img src="img/portfolio/d4.jpg" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/d4.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                  <a href = "pay_merchandise.php?name=<?php 
-                     mysqli_data_seek($result3,0);
-                  while($row=mysqli_fetch_assoc($result3)){
-                    if($row["merch_id"]==3){
-                        $rname=$row["merch_name"];
-                        echo $row["merch_name"];
-                    }
-                  }
-                ?>"><h4><?php echo $rname;?></h4></a>
+                      <a href = "pay_merchendise.html"><h4>Deadpool</h4></a>
                       <span>INR 3500/-</span>
                     </a>
                   </div>
@@ -553,22 +508,15 @@
               </div>
             </div>
           </div>
-
+          <!-- single-awesome-project end -->
+          <!-- single-awesome-project start -->
           <div class="col-md-4 col-sm-4 col-xs-12 development">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchandise.php"><img src="img/portfolio/d5.png" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/d5.png" alt="" /></a>
                 <div class="add-actions text-center text-center">
                   <div class="project-dec">
-                  <a href = "pay_merchandise.php?name=<?php 
-                     mysqli_data_seek($result3,0);
-                  while($row=mysqli_fetch_assoc($result3)){
-                    if($row["merch_id"]==5){
-                        $rname=$row["merch_name"];
-                        echo $row["merch_name"];
-                    }
-                  }
-                ?>"><h4><?php echo $rname;?></h4></a>
+                    <a href = "pay_merchendise.html"><h4>Disney Special</h4></a>
                    <span>INR 2700/-</span>
                     </a>
                   </div>
@@ -576,21 +524,15 @@
               </div>
             </div>
           </div>
+          <!-- single-awesome-project end -->
+          <!-- single-awesome-project start -->
           <div class="col-md-4 col-sm-4 col-xs-12 design photo">
             <div class="single-awesome-project">
               <div class="awesome-img">
-                <a href="pay_merchandise.php"><img src="img/portfolio/d6.jpg" alt="" /></a>
+                <a href="pay_merchendise.html"><img src="img/portfolio/d6.jpg" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                  <a href = "pay_merchandise.php?name=<?php 
-                     mysqli_data_seek($result3,0);
-                  while($row=mysqli_fetch_assoc($result3)){
-                    if($row["merch_id"]==6){
-                        $rname=$row["merch_name"];
-                        echo $row["merch_name"];
-                    }
-                  }
-                ?>"><h4><?php echo $rname;?></h4></a>
+                    <a href = "pay_merchendise.html"><h4>Mickey dark theme</h4></a>
                      <span>INR 2100/-</span>
                     </a>
                   </div>
@@ -598,7 +540,7 @@
               </div>
             </div>
           </div>
-           
+          <!-- single-awesome-project end -->
         </div>
       </div>
     </div>
@@ -608,14 +550,14 @@
   
  
   <!-- Start contact Area -->
-  <div id="viewbooking" class="contact-area">
+  <div id="contact" class="contact-area">
     <div class="contact-inner area-padding">
       <div class="contact-overly"></div>
       <div class="container ">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline text-center">
-              <h2>View Booking</h2>
+              <h2>Contact us</h2>
             </div>
           </div>
         </div>
@@ -624,23 +566,35 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="contact-icon text-center">
               <div class="single-icon">
+                <i class="fa fa-mobile"></i>
+                <p>
+                  Call: +91 9480057965<br>
+                  <span>Monday-Friday (9am-5pm)</span>
+                </p>
               </div>
             </div>
           </div>
+          <!-- Start contact icon column -->
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="contact-icon text-center">
               <div class="single-icon">
                 <i class="fa fa-envelope-o"></i>
                 <p>
-                  Enter your email<br>
-               View your booking
+                  Email: Reviews@disneylandblr.com<br>
+               
                 </p>
               </div>
             </div>
           </div>
+          <!-- Start contact icon column -->
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="contact-icon text-center">
               <div class="single-icon">
+                <i class="fa fa-map-marker"></i>
+                <p>
+                  Location: 2nd Main 1st cross<br>
+                  <span>Banashhankari 560070, Bangalore</span>
+                </p>
               </div>
             </div>
           </div>
@@ -652,16 +606,32 @@
           <!-- End Google Map -->
 
           <!-- Start  contact -->
-          <div class="col-md-4 col-sm-4 col-xs-4" style="margin-left:34%">
-            <div id="errormessage"></div>
-              <form action="getBookings.php" method="get" role="form" class="contactForm">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="form contact-form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">View</button></div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
+            </div>
           </div>
+		  
           <!-- End Left contact -->
         </div>
       </div>
@@ -678,7 +648,7 @@
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
-                  <h2>Disney World </h2>
+                  <h2>Disney Land </h2>
 				  <p>Bangalore</p>
                 </div>
 
@@ -694,7 +664,7 @@
                 
                 <div class="footer-contacts">
                   <p><span>Tel:</span> +91 9480057965</p>
-                  <p><span>Email:</span> enquiry@disneyworldblr.com</p>
+                  <p><span>Email:</span> enquiry@disneylandblr.com</p>
                   <p><span>Working Hours:</span> 9am-5pm</p>
                 </div>
               </div>
@@ -725,7 +695,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="copyright text-center">
               <p>
-                &copy; Copyright <strong>Disney World</strong>. All Rights Reserved
+                &copy; Copyright <strong>Disney Land</strong>. All Rights Reserved
               </p>
             </div>
             <div class="credits">
@@ -767,6 +737,3 @@
 </body>
 
 </html>
-<?php
-    mysqli_close($conn);
-?>

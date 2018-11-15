@@ -9,10 +9,9 @@
                  if(mysqli_connect_errno()){
                      die("Database connection failed ".mysqli_connect_error()."(".mysqli_connect_errno().")");
                  }
-                 
-                 
+                 $query = "SELECT * FROM transactions WHERE trans_user_email = 'nandan@gmail.com'";
+                 $result = mysqli_query($conn,$query);
+                 $num_rows = mysqli_num_rows($result);                 
+                 echo($num_rows);
                   mysqli_close($conn);
 ?>
-<html>
-<body>
-<form action="booking_rides.php" method="POST">

@@ -126,14 +126,14 @@
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Name</span>
-										<input class="form-control" type="text" placeholder="Enter your name" name="name" id="name">
+										<input class="form-control" type="text" placeholder="Enter your name" name="name" required id="name">
 									</div>
 								</div>
 							
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Email</span>
-										<input class="form-control" type="email" placeholder="Enter your email" name="email" id="email">
+										<input class="form-control" type="email" placeholder="Enter your email" name="email" required id="email">
 									</div>
 								</div>
 							</div>
@@ -168,6 +168,6 @@
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>
